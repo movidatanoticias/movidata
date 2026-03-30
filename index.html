@@ -141,7 +141,12 @@
 
 <!-- TOP BAR -->
 <div class="topbar">
-  <span>Sábado, 28 de marzo de 2026</span>
+  <span id="fecha-hoy"></span>
+<script>
+  const hoy = new Date();
+  const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  document.getElementById('fecha-hoy').textContent = hoy.toLocaleDateString('es-CO', opciones);
+</script>
   <span></span>
   <a href="#"></a>
 </div>
@@ -231,23 +236,6 @@
 
 <script>
 const noticias = [
-
-  {
-    titulo: "Colombia y la Semana Santa: movilidad masiva y restricciones en las vías",
-    categoria: "Movilidad",
-    imagen: "https://plus.unsplash.com/premium_photo-1664547606209-fb31ec979c85?w=800&auto=format&fit=crop&q=80",
-    resumen: "Más de 15 millones de viajeros se movilizarán en Semana Santa 2026. El Gobierno activa plan nacional con restricciones a carga pesada, monitoreo en tiempo real y foco en seguridad vial.",
-    contenido: `Colombia se prepara para una de las semanas de mayor movilización del año. Según el Ministerio de Transporte, se proyecta que más de 10 millones de vehículos se desplacen por las vías del país, además de más de 4 millones de pasajeros desde terminales terrestres y cerca de 1,8 millones por vía aérea, con un promedio superior a 170.000 pasajeros diarios en los aeropuertos.\n\nEn las carreteras se esperan hasta 190.000 vehículos diarios, con jornadas que podrían superar los 192.000 vehículos en un solo día. Para soportar ese volumen estarán en operación 41 corredores concesionados (unos 7.499 km), con más de 6.450 personas en vía, 700 equipos de emergencia y un sistema de monitoreo en tiempo real.\n\nUno de los ejes del plan es la restricción de vehículos de carga pesada (más de 3,4 toneladas) en los principales corredores. Las restricciones aplican así: Miércoles 1 de abril de 12:00 m. a 11:00 p.m. Jueves 2 de abril de 6:00 a.m. a 3:00 p.m. Sábado 4 de abril de 2:00 p.m. a 11:00 p.m. Domingo 5 de abril (retorno) de 10:00 a.m. a 11:00 p.m. Los corredores afectados incluyen Bogotá-Girardot, Bogotá-Villavicencio, Bogotá-Tunja, Bucaramanga-San Alberto y Medellín-Costa Atlántica.\n\nLa temporada inicia con una red vial ya exigida por las lluvias: el país registra 5 cierres totales y 22 cierres parciales en al menos 10 departamentos, con afectaciones en Nariño, Antioquia y Santander. Se recomienda consultar el estado de las vías en la línea gratuita 01 8000 519 1656.\n\nEl objetivo central del operativo no es solo que la gente se mueva, sino que llegue viva. En Semana Santa de 2025, 246 personas perdieron la vida en siniestros viales en Colombia. El Ministerio recomienda planear viajes con anticipación, revisar el vehículo, respetar límites de velocidad y no conducir bajo efectos del alcohol ni usar el celular al volante.`
-  },
-  
-  {
-    titulo: "Colombia anuncia salida del sistema de arbitraje internacional de inversión",
-    categoria: "Economía",
-    imagen: "https://images.unsplash.com/photo-1533699224246-6dc3b3ed3304?w=800&auto=format&fit=crop&q=80",
-    resumen: "El presidente Petro confirmó que Colombia iniciará el proceso para retirarse del mecanismo ISDS, que permite a inversionistas extranjeros demandar al Estado ante tribunales privados internacionales.",
-    contenido: `El presidente Gustavo Petro confirmó que Colombia iniciará el proceso para retirarse del régimen de arbitraje internacional de inversión (ISDS), un mecanismo que permite a inversionistas extranjeros demandar al Estado ante tribunales privados por medidas que afecten sus intereses.\n\nPetro hizo el pronunciamiento el 25 de marzo durante la presentación del informe económico El modelo económico está cambiando: avances y resistencias bajo el gobierno Petro. La decisión se basa en una carta firmada por cerca de 200 economistas y juristas de 24 países, incluyendo a los premios Nobel Joseph Stiglitz y Thomas Piketty, quienes argumentan que el sistema favorece a las empresas transnacionales sobre los intereses públicos y obstaculiza políticas como la transición energética.\n\nEl mandatario señaló que Colombia enfrenta litigios por hasta 52 billones de pesos (aproximadamente 12.500 millones de dólares), equivalentes al déficit fiscal primario, y que estos tribunales suelen fallar contra los Estados.\n\nEl arbitraje inversor-Estado permite a compañías extranjeras resolver disputas fuera de los tribunales nacionales, en paneles independientes regulados por tratados bilaterales o TLC. Colombia ha ganado 10 de 12 casos entre 2021 y 2024, aunque el número de demandas ha crecido de 20 a 34 casos, con pretensiones que escalaron a 59 billones de pesos.\n\nEl Gobierno propone reemplazar el modelo con mecanismos judiciales nacionales o multilaterales más equitativos. Sin embargo, María Claudia Lacouture, presidenta de AmCham Colombia, advirtió que la medida podría erosionar la confianza de inversionistas al reducir garantías de imparcialidad, en un contexto de caída de la inversión extranjera directa.\n\nLa salida será gradual, implicando la revisión de tratados vigentes y contratos con cláusulas arbitrales. Analistas estiman que el proceso tomará años, pero podría impactar la percepción de seguridad jurídica en el país.`
-  },
-  
   {
     titulo: "Los retos en movilidad y seguridad vial que enfrentará la próxima presidencia de Colombia (2026-2030)",
     categoria: "Movilidad",
